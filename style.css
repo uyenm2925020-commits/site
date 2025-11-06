@@ -1,0 +1,646 @@
+/* Thiết lập chung cho toàn bộ trang */
+body {
+    font-family: 'Montserrat', sans-serif; /* Font chữ hiện đại, sạch sẽ */
+    margin: 0;
+    padding: 0;
+    background-color: #fcfcfc; /* Nền rất sáng */
+    color: #333; /* Màu chữ chính */
+    line-height: 1.7; /* Chiều cao dòng để dễ đọc */
+    scroll-behavior: smooth; /* Cuộn mượt mà khi click vào link nội bộ */
+}
+
+/* Container để giới hạn chiều rộng nội dung */
+.container {
+    max-width: 1100px;
+    margin: 0 auto; /* Căn giữa nội dung */
+    padding: 0 25px;
+}
+
+/* Thanh điều hướng (Navigation Bar) */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.95); /* Nền trắng trong suốt nhẹ */
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: fixed; /* Cố định thanh nav */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: rgba(255, 255, 255, 1); /* Nền đặc khi cuộn */
+    padding: 10px 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-logo {
+    font-family: 'Dancing Script', cursive; /* Font chữ kiểu viết tay cho logo */
+    font-size: 2.2em;
+    color: #4CAF50; /* Màu xanh lá cây */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.brand-logo:hover {
+    color: #388E3C; /* Màu xanh đậm hơn khi hover */
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: #555;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.05em;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after { /* Hiệu ứng gạch chân khi hover */
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #4CAF50;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: #4CAF50;
+}
+
+
+/* Header - Trang chủ (Hero Section) */
+.hero-section {
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('https://images.unsplash.com/photo-1555109407-7ff95742296d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover; /* Ảnh nền nhẹ nhàng, nữ tính */
+    color: #333; /* Màu chữ đen */
+    text-align: center;
+    padding: 150px 20px 80px; /* Padding trên dưới */
+    height: 100vh; /* Chiếm toàn bộ chiều cao màn hình */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Cho phép các hiệu ứng animate-on-scroll */
+    overflow: hidden; /* Che đi phần ảnh bị tràn ra ngoài */
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-family: 'Dancing Script', cursive; /* Font chữ viết tay cho tên */
+    font-size: 5.5em; /* Kích thước tên lớn */
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+    color: #388E3C; /* Màu xanh đậm hơn */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.hero-content p {
+    font-size: 1.8em;
+    margin-top: 0;
+    font-weight: 400;
+    color: #555;
+}
+
+.hero-content .tagline {
+    font-size: 1.3em;
+    font-style: italic;
+    opacity: 0.8;
+    margin-top: 15px;
+    color: #777;
+}
+
+/* Nút bấm */
+.btn {
+    display: inline-block;
+    background-color: #4CAF50; /* Màu xanh lá cây nổi bật */
+    color: white;
+    padding: 15px 35px;
+    text-decoration: none;
+    border-radius: 50px;
+    margin-top: 40px;
+    font-size: 1.15em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+}
+
+.btn:hover {
+    background-color: #388E3C; /* Màu xanh đậm hơn khi rê chuột */
+    transform: translateY(-5px); /* Nâng nhẹ nút lên */
+    box-shadow: 0 8px 20px rgba(76, 175, 80, 0.4);
+}
+
+.btn i {
+    margin-left: 10px;
+}
+
+/* Các phần chính của trang (sections) */
+.section {
+    padding: 100px 0; /* Khoảng cách trên dưới cho mỗi phần */
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Đảm bảo hiệu ứng animate-on-scroll hoạt động */
+}
+
+.section-title {
+    font-size: 3.5em;
+    color: #2c3e50; /* Màu xanh đậm */
+    margin-bottom: 60px;
+    position: relative;
+    display: inline-block;
+    font-weight: 700;
+}
+
+.section-title::after { /* Gạch chân dưới tiêu đề */
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 5px;
+    background-color: #4CAF50; /* Màu xanh lá cây */
+    border-radius: 2.5px;
+}
+
+.bg-light {
+    background-color: #f0f5f0; /* Nền xanh lá nhạt cho các phần xen kẽ */
+}
+
+/* Phần Giới thiệu bản thân (About Me) */
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 60px; /* Khoảng cách lớn hơn giữa ảnh và chữ */
+    text-align: left;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.profile-pic {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%; /* Ảnh bo tròn */
+    object-fit: cover;
+    border: 7px solid #4CAF50; /* Viền ảnh nổi bật */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.5s ease-out;
+}
+
+.profile-pic.is-visible {
+    transform: scale(1);
+}
+.profile-pic:not(.is-visible) {
+    transform: scale(0.9);
+    opacity: 0;
+}
+
+
+.about-text {
+    flex: 1;
+    min-width: 350px;
+}
+
+.about-text p {
+    font-size: 1.15em;
+    color: #555;
+    margin-bottom: 1.5em;
+    line-height: 1.8;
+}
+
+/* Phần Chuyên môn & Sở thích (Expertise & Interests) */
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 4 cột trên màn hình lớn */
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.expertise-item {
+    background-color: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    text-align: center;
+}
+
+.expertise-item:hover {
+    transform: translateY(-12px); /* Nâng nhẹ khi rê chuột */
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+.expertise-item .icon {
+    font-size: 4em;
+    color: #4CAF50;
+    margin-bottom: 25px;
+}
+
+.expertise-item h3 {
+    font-size: 2em;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.expertise-item p {
+    font-size: 1.05em;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Phần Học tập & Nghiên cứu (Academics & Research) */
+.academics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 35px;
+    margin-top: 50px;
+}
+
+.academic-item {
+    background-color: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    text-align: left;
+}
+
+.academic-item:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+.academic-item .icon {
+    font-size: 3.5em;
+    color: #2980b9; /* Màu xanh dương */
+    margin-bottom: 20px;
+}
+
+.academic-item h3 {
+    font-size: 1.8em;
+    color: #2c3e50;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.academic-item p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.link-more {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.link-more:hover {
+    color: #388E3C;
+    text-decoration: underline;
+}
+
+.link-more i {
+    margin-left: 5px;
+    font-size: 0.9em;
+}
+
+/* Phần Kết nối & Giao lưu (Connect & Network) */
+.social-links {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.social-icon {
+    font-size: 2.8em;
+    color: #555;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #4CAF50;
+    transform: translateY(-8px) scale(1.1);
+}
+
+/* Phần Blog/Góc chia sẻ (Blog/Insights) */
+.blog-posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.blog-post-item {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    text-align: left;
+}
+
+.blog-post-item:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+.blog-thumbnail {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.blog-post-item h3 {
+    font-size: 1.8em;
+    color: #2c3e50;
+    margin: 20px 25px 10px;
+    font-weight: 600;
+}
+
+.blog-post-item h3 a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.blog-post-item h3 a:hover {
+    color: #4CAF50;
+}
+
+.blog-post-item .blog-date {
+    font-size: 0.9em;
+    color: #888;
+    margin: 0 25px 15px;
+}
+
+.blog-post-item p {
+    font-size: 1em;
+    color: #666;
+    margin: 0 25px 20px;
+    line-height: 1.6;
+}
+
+/* Phần Liên hệ (Contact) */
+.contact-form {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box; /* Bao gồm padding và border trong width */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+    outline: none;
+}
+
+.contact-form .btn {
+    width: auto;
+    margin-top: 15px;
+    padding: 12px 30px;
+    font-size: 1.1em;
+}
+
+.contact-details {
+    margin-top: 50px;
+    font-size: 1.15em;
+    color: #555;
+}
+
+.contact-details p {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-details .icon {
+    font-size: 1.6em;
+    color: #4CAF50;
+    margin-right: 20px;
+    width: 35px;
+    text-align: center;
+}
+
+.contact-details a {
+    color: #2980b9;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+    color: #1a6cb2;
+    text-decoration: underline;
+}
+
+/* Footer - Chữ ký */
+footer {
+    background-color: #2c3e50; /* Nền xanh đậm */
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 80px;
+    font-size: 0.95em;
+    line-height: 1.6;
+}
+
+footer p {
+    margin: 8px 0;
+    opacity: 0.9;
+}
+
+/* Responsive Design - Điều chỉnh cho màn hình nhỏ */
+@media (max-width: 992px) {
+    .hero-content h1 {
+        font-size: 4.5em;
+    }
+    .hero-content p {
+        font-size: 1.5em;
+    }
+    .nav-links li {
+        margin-left: 20px;
+    }
+    .section-title {
+        font-size: 2.8em;
+    }
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    .profile-pic {
+        margin-bottom: 20px;
+    }
+    .about-text {
+        min-width: unset;
+    }
+    .expertise-grid, .academics-grid, .blog-posts-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+    }
+    .nav-links {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .nav-links li {
+        margin: 5px 10px;
+    }
+    .hero-content h1 {
+        font-size: 3.5em;
+    }
+    .hero-content p {
+        font-size: 1.2em;
+    }
+    .hero-content .tagline {
+        font-size: 1em;
+    }
+    .btn {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+    .section {
+        padding: 80px 0;
+    }
+    .section-title {
+        font-size: 2.2em;
+        margin-bottom: 40px;
+    }
+    .about-text p, .expertise-item p, .academic-item p, .blog-post-item p, .contact-details p {
+        font-size: 1em;
+    }
+    .expertise-item h3, .academic-item h3, .blog-post-item h3 {
+        font-size: 1.5em;
+    }
+    .social-icon {
+        font-size: 2.2em;
+    }
+    .contact-form {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2.8em;
+    }
+    .hero-content p {
+        font-size: 1em;
+    }
+    .nav-links a {
+        font-size: 0.9em;
+    }
+    .section-title {
+        font-size: 1.8em;
+    }
+    .profile-pic {
+        width: 200px;
+        height: 200px;
+        border-width: 5px;
+    }
+    .interests-grid, .academics-grid, .blog-posts-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Hiệu ứng Animation cho các phần tử */
+/* Fade in Up (Hiệu ứng hiện lên từ dưới) */
+.animate-fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-fade-in-up.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Các delay cho hiệu ứng nối tiếp nhau */
+.animate-fade-in-up.delay-1 { transition-delay: 0.2s; }
+.animate-fade-in-up.delay-2 { transition-delay: 0.4s; }
+.animate-fade-in-up.delay-3 { transition-delay: 0.6s; }
+
+/* Hiệu ứng chung cho các phần tử khi cuộn */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Các delay cho hiệu ứng nối tiếp nhau trong các grid */
+.animate-on-scroll.delay-1 { transition-delay: 0.1s; }
+.animate-on-scroll.delay-2 { transition-delay: 0.2s; }
+.animate-on-scroll.delay-3 { transition-delay: 0.3s; }
