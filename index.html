@@ -1,163 +1,229 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trần Bình Phương Uyên - Personal Brand</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Pacifico&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Quicksand', sans-serif;
-      background: linear-gradient(to bottom right, #e0f7fa, #f1f8e9);
-      margin: 0;
-      padding: 0;
-      color: #004d40;
-    }
-
-    header {
-      background: linear-gradient(90deg, #26a69a, #80cbc4);
-      color: white;
-      text-align: center;
-      padding: 50px 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-    }
-
-    header p {
-      font-size: 1.2em;
-    }
-
-    main {
-      max-width: 900px;
-      background: white;
-      margin: 40px auto;
-      border-radius: 20px;
-      padding: 30px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
-
-    h2 {
-      color: #00796b;
-      border-left: 6px solid #26a69a;
-      padding-left: 10px;
-    }
-
-    section {
-      margin-bottom: 40px;
-    }
-
-    .intro {
-      text-align: center;
-    }
-
-    .intro img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      margin-bottom: 20px;
-      border: 4px solid #80cbc4;
-      object-fit: cover;
-    }
-
-    .hobbies ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .hobbies li {
-      background: #e0f2f1;
-      margin: 8px 0;
-      padding: 10px;
-      border-radius: 10px;
-      color: #004d40;
-    }
-
-    .upload-section {
-      text-align: center;
-    }
-
-    .upload-section input {
-      margin-top: 10px;
-    }
-
-    #preview {
-      margin-top: 20px;
-    }
-
-    #preview img {
-      max-width: 300px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-
-    footer {
-      background: #004d40;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      font-family: 'Pacifico', cursive;
-      border-top-left-radius: 20px;
-      border-top-right-radius: 20px;
-    }
-
-    @media (max-width: 600px) {
-      main {
-        margin: 20px;
-        padding: 20px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trần Bình Phương Uyên - Quản lý Tài nguyên & Môi trường</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>🌿 Trần Bình Phương Uyên 🌿</h1>
-    <p>Học viên Cao học - Ngành Quản lý Tài nguyên & Môi trường</p>
-  </header>
 
-  <main>
-    <section class="intro">
-      <img src="https://cdn-icons-png.flaticon.com/512/2922/2922506.png" alt="Ảnh đại diện Uyên">
-      <p>Xin chào! Mình là <strong>Trần Bình Phương Uyên</strong> – một người yêu thiên nhiên, thích học hỏi, kết bạn và khám phá thế giới xung quanh 🌏.  
-      Mình đang theo học ngành <em>Quản lý Tài nguyên & Môi trường</em> với mong muốn đóng góp vào sự phát triển bền vững của hành tinh xanh 💚.</p>
-    </section>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#hero" class="brand-logo">Phương Uyên</a>
+            <ul class="nav-links">
+                <li><a href="#about">Về tôi</a></li>
+                <li><a href="#expertise">Chuyên môn</a></li>
+                <li><a href="#academics">Học tập & Nghiên cứu</a></li>
+                <li><a href="#connect">Kết nối</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Liên hệ</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <section class="hobbies">
-      <h2>💫 Sở thích của mình</h2>
-      <ul>
-        <li>🌼 Kết bạn và trò chuyện với mọi người</li>
-        <li>🗺️ Đi du lịch, khám phá văn hóa và thiên nhiên</li>
-        <li>📚 Học hỏi các phương pháp nghiên cứu về môi trường</li>
-        <li>🌿 Tham gia hoạt động bảo vệ môi trường</li>
-      </ul>
-    </section>
+    <header id="hero" class="hero-section">
+        <div class="hero-content">
+            <h1 class="animate-fade-in-up">Trần Bình Phương Uyên</h1>
+            <p class="animate-fade-in-up delay-1">Học viên Cao học Quản lý Tài nguyên & Môi trường</p>
+            <p class="tagline animate-fade-in-up delay-2">Kiến tạo tương lai xanh, kết nối mọi người, khám phá thế giới.</p>
+            <a href="#about" class="btn animate-fade-in-up delay-3">Tìm hiểu thêm về tôi <i class="fas fa-arrow-down"></i></a>
+        </div>
+    </header>
 
-    <section class="upload-section">
-      <h2>📸 Upload ảnh của bạn</h2>
-      <p>Bạn có thể tải lên ảnh du lịch hoặc khoảnh khắc đáng nhớ của mình!</p>
-      <input type="file" id="uploadInput" accept="image/*" onchange="previewImage(event)">
-      <div id="preview"></div>
-    </section>
-  </main>
+    <main>
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Về Trần Bình Phương Uyên</h2>
+                <div class="about-content">
+                    <img src="https://via.placeholder.com/300/f0f2f5/a8b9c4?text=Your+Photo" alt="Ảnh của Phương Uyên" class="profile-pic animate-on-scroll">
+                    <div class="about-text animate-on-scroll delay-1">
+                        <p>Chào bạn! Tôi là Trần Bình Phương Uyên, một học viên cao học đầy nhiệt huyết trong lĩnh vực Quản lý Tài nguyên và Môi trường. Tôi tin rằng việc hiểu và bảo vệ môi trường là chìa khóa cho một tương lai bền vững. Luôn nỗ lực học hỏi, nghiên cứu và tìm kiếm những giải pháp thiết thực để ứng dụng vào thực tiễn.</p>
+                        <p>Với tôi, mỗi ngày là một cơ hội để khám phá, để học hỏi và để kết nối. Rất mong được chia sẻ những kiến thức, trải nghiệm và cùng bạn kiến tạo những giá trị tốt đẹp.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <footer>
-    Designed & Signed by 💖 Trần Bình Phương Uyên 💖
-  </footer>
+        <section id="expertise" class="section bg-light">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Chuyên môn & Sở thích</h2>
+                <div class="expertise-grid">
+                    <div class="expertise-item animate-on-scroll">
+                        <i class="fas fa-tree icon"></i>
+                        <h3>Quản lý Tài nguyên & Môi trường</h3>
+                        <p>Tập trung vào các vấn đề biến đổi khí hậu, phát triển bền vững, đánh giá tác động môi trường và quy hoạch sử dụng đất.</p>
+                    </div>
+                    <div class="expertise-item animate-on-scroll delay-1">
+                        <i class="fas fa-chart-line icon"></i>
+                        <h3>Phân tích dữ liệu Địa không gian</h3>
+                        <p>Ứng dụng GIS, Viễn thám và Google Earth Engine để giám sát biến động môi trường và tài nguyên.</p>
+                    </div>
+                    <div class="expertise-item animate-on-scroll delay-2">
+                        <i class="fas fa-users icon"></i>
+                        <h3>Kết nối & Giao lưu</h3>
+                        <p>Đam mê gặp gỡ, trao đổi ý tưởng và xây dựng cộng đồng học thuật, kết nối những người cùng chí hướng.</p>
+                    </div>
+                    <div class="expertise-item animate-on-scroll delay-3">
+                        <i class="fas fa-plane-departure icon"></i>
+                        <h3>Du lịch & Khám phá</h3>
+                        <p>Tìm hiểu văn hóa, chiêm ngưỡng vẻ đẹp thiên nhiên và ghi lại những khoảnh khắc đáng nhớ qua mỗi chuyến đi.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <script>
-    function previewImage(event) {
-      const preview = document.getElementById('preview');
-      preview.innerHTML = '';
-      const file = event.target.files[0];
-      if (file) {
-        const img = document.createElement('img');
-        img.src = URL.createObjectURL(file);
-        preview.appendChild(img);
-      }
-    }
-  </script>
+        <section id="academics" class="section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Học tập & Nghiên cứu</h2>
+                <p class="animate-on-scroll">Tôi luôn chủ động tìm kiếm và hoàn thành các dự án, bài tập học thuật. Dưới đây là một số lĩnh vực và hoạt động tiêu biểu:</p>
+                <div class="academics-grid">
+                    <div class="academic-item animate-on-scroll">
+                        <i class="fas fa-flask icon"></i>
+                        <h3>Dự án nghiên cứu</h3>
+                        <p>Tham gia các dự án về phân tích chất lượng nước, đánh giá đa dạng sinh học và mô hình hóa tác động môi trường.</p>
+                        <a href="#" class="link-more">Xem chi tiết <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                    <div class="academic-item animate-on-scroll delay-1">
+                        <i class="fas fa-book-open icon"></i>
+                        <h3>Bài tập & Đồ án</h3>
+                        <p>Thực hiện các bài tập lớn, đồ án môn học với kết quả cao, đặc biệt là các môn liên quan đến GIS và Thống kê môi trường.</p>
+                        <a href="#" class="link-more">Xem danh mục <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                    <div class="academic-item animate-on-scroll delay-2">
+                        <i class="fas fa-lightbulb icon"></i>
+                        <h3>Kiến thức chuyên sâu</h3>
+                        <p>Thường xuyên cập nhật kiến thức về chính sách môi trường, kinh tế tuần hoàn và các công nghệ xanh mới nổi.</p>
+                        <a href="#" class="link-more">Đọc thêm <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="connect" class="section bg-light">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Cùng Kết nối & Giao lưu!</h2>
+                <p class="animate-on-scroll">Bạn có cùng niềm đam mê về môi trường, muốn chia sẻ ý tưởng hay đơn giản là tìm một người bạn đồng hành trong những chuyến đi? Tôi rất sẵn lòng!</p>
+                <div class="social-links animate-on-scroll delay-1">
+                    <a href="https://www.linkedin.com/in/phuonguyen" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.facebook.com/phuonguyen" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="mailto:phuonguyen.env@example.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+                    <a href="#" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+                <p class="animate-on-scroll delay-2">Đừng ngần ngại gửi tin nhắn hoặc lời mời kết nối nhé!</p>
+            </div>
+        </section>
+
+        <section id="blog" class="section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Blog & Góc chia sẻ</h2>
+                <p class="animate-on-scroll">Nơi tôi chia sẻ những suy nghĩ, trải nghiệm du lịch, kiến thức về môi trường và những điều thú vị khác.</p>
+                <div class="blog-posts-grid">
+                    <div class="blog-post-item animate-on-scroll">
+                        <img src="https://via.placeholder.com/400x250/d2e3d8/ffffff?text=Du+lịch+Đà+Lạt" alt="Bài viết du lịch" class="blog-thumbnail">
+                        <h3><a href="#">Khám phá vẻ đẹp bất tận của Đà Lạt</a></h3>
+                        <p class="blog-date">20/10/2023</p>
+                        <p>Những trải nghiệm đáng nhớ về cảnh quan, ẩm thực và con người xứ sở sương mù.</p>
+                        <a href="#" class="link-more">Đọc tiếp <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                    <div class="blog-post-item animate-on-scroll delay-1">
+                        <img src="https://via.placeholder.com/400x250/c0d7cc/ffffff?text=Bảo+vệ+Môi+trường" alt="Bài viết môi trường" class="blog-thumbnail">
+                        <h3><a href="#">5 cách đơn giản bảo vệ môi trường</a></h3>
+                        <p class="blog-date">15/09/2023</p>
+                        <p>Những hành động nhỏ hàng ngày có thể tạo nên sự khác biệt lớn cho hành tinh của chúng ta.</p>
+                        <a href="#" class="link-more">Đọc tiếp <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                    <div class="blog-post-item animate-on-scroll delay-2">
+                        <img src="https://via.placeholder.com/400x250/a8c9b3/ffffff?text=GEE+Tips" alt="Bài viết công nghệ" class="blog-thumbnail">
+                        <h3><a href="#">Mẹo sử dụng Google Earth Engine hiệu quả</a></h3>
+                        <p class="blog-date">01/08/2023</p>
+                        <p>Chia sẻ một số thủ thuật và kinh nghiệm giúp bạn làm việc nhanh hơn với GEE.</p>
+                        <a href="#" class="link-more">Đọc tiếp <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section bg-light">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Liên hệ</h2>
+                <p class="animate-on-scroll">Bạn có câu hỏi, muốn hợp tác hoặc chỉ đơn giản là gửi lời chào? Hãy điền vào biểu mẫu dưới đây hoặc liên hệ trực tiếp!</p>
+                <form class="contact-form animate-on-scroll delay-1">
+                    <div class="form-group">
+                        <label for="name">Tên của bạn:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email của bạn:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Tin nhắn:</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Gửi tin nhắn <i class="fas fa-paper-plane"></i></button>
+                </form>
+                <div class="contact-details animate-on-scroll delay-2">
+                    <p><i class="fas fa-envelope icon"></i> Email: <a href="mailto:phuonguyen.env@example.com">phuonguyen.env@example.com</a></p>
+                    <p><i class="fas fa-map-marker-alt icon"></i> Địa điểm: Thành phố Hồ Chí Minh, Việt Nam</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Trần Bình Phương Uyên. Mọi quyền được bảo lưu.</p>
+            <p>Với tình yêu dành cho môi trường và những chuyến đi.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('.nav-links a[href^="#"], .hero-section .btn[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Animation on scroll
+        const faders = document.querySelectorAll('.animate-on-scroll');
+        const appearOptions = {
+            threshold: 0.3, // Item appears when 30% is visible
+            rootMargin: "0px 0px -50px 0px" // Start animation a bit before reaching bottom
+        };
+
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('is-visible');
+                    appearOnScroll.unobserve(entry.target);
+                }
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+
+        // Add a class to navbar on scroll for sticky effect or background change
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) { // When scrolled more than 50px
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+
 </body>
 </html>
