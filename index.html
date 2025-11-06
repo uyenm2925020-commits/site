@@ -1,1 +1,91 @@
-<p>đây là website của Uyên</p>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trần Bình Phương Uyên - Quản lý Tài nguyên & Môi trường</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1>Trần Bình Phương Uyên</h1>
+            <p>Học viên Cao học Quản lý Tài nguyên & Môi trường</p>
+            <p class="tagline">Kiến tạo tương lai xanh, kết nối mọi người, khám phá thế giới.</p>
+            <a href="#about" class="btn">Tìm hiểu thêm về tôi</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="section">
+            <div class="container">
+                <h2>Về Trần Bình Phương Uyên</h2>
+                <div class="about-content">
+                    <img src="https://via.placeholder.com/200/cccccc/ffffff?text=Avatar" alt="Ảnh của Phương Uyên" class="profile-pic">
+                    <div class="about-text">
+                        <p>Chào bạn! Tôi là Trần Bình Phương Uyên, một học viên cao học đầy nhiệt huyết trong lĩnh vực Quản lý Tài nguyên và Môi trường. Tôi tin rằng việc hiểu và bảo vệ môi trường là chìa khóa cho một tương lai bền vững. Luôn nỗ lực học hỏi, nghiên cứu và tìm kiếm những giải pháp thiết thực để ứng dụng vào thực tiễn.</p>
+                        <p>Với tôi, mỗi ngày là một cơ hội để khám phá, để học hỏi và để kết nối. Rất mong được chia sẻ những kiến thức, trải nghiệm và cùng bạn kiến tạo những giá trị tốt đẹp.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="interests" class="section bg-light">
+            <div class="container">
+                <h2>Sở thích</h2>
+                <div class="interests-grid">
+                    <div class="interest-item">
+                        <i class="fas fa-users icon"></i>
+                        <h3>Kết nối & Kết bạn</h3>
+                        <p>Tôi yêu thích gặp gỡ những người bạn mới, trao đổi ý tưởng và học hỏi từ những góc nhìn đa dạng. Mở lòng để đón nhận và chia sẻ, tạo nên những mối quan hệ ý nghĩa.</p>
+                    </div>
+                    <div class="interest-item">
+                        <i class="fas fa-plane-departure icon"></i>
+                        <h3>Du lịch & Khám phá</h3>
+                        <p>Khám phá những vùng đất mới, tìm hiểu văn hóa địa phương và chiêm ngưỡng vẻ đẹp thiên nhiên luôn là niềm đam mê bất tận của tôi. Mỗi chuyến đi là một trải nghiệm đáng giá.</p>
+                    </div>
+                    <div class="interest-item">
+                        <i class="fas fa-seedling icon"></i>
+                        <h3>Bảo vệ Môi trường</h3>
+                        <p>Là một phần không thể thiếu trong cuộc sống và học tập của tôi. Tôi luôn tìm cách đóng góp vào các hoạt động bảo vệ môi trường, từ những hành động nhỏ nhất đến các dự án nghiên cứu.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>Liên hệ</h2>
+                <p>Bạn muốn kết nối, trao đổi về môi trường hay đơn giản là chia sẻ về những chuyến đi thú vị? Đừng ngần ngại liên hệ với tôi!</p>
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope icon"></i> Email: <a href="mailto:phuonguyen.env@example.com">phuonguyen.env@example.com</a></p>
+                    <p><i class="fab fa-linkedin icon"></i> LinkedIn: <a href="https://www.linkedin.com/in/phuonguyen" target="_blank">linkedin.com/in/phuonguyen (Thay bằng link của bạn)</a></p>
+                    <p><i class="fas fa-map-marker-alt icon"></i> Địa điểm: Thành phố Hồ Chí Minh, Việt Nam</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Trần Bình Phương Uyên. All Rights Reserved.</p>
+            <p>Thiết kế và phát triển bởi Trần Bình Phương Uyên.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
